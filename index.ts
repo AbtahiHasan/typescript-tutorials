@@ -1,22 +1,16 @@
-type TUser = {
-  name: string;
-  bio?: string;
-  role: "admin";
-  isVerified: boolean;
-};
+type UserRole = "user" | "admin" | "super-admin";
 
-type MyType = null;
+const userRole: UserRole = "admin";
 
-const user1: TUser = {
-  name: "John deo",
+type Identity = { id: string; name: string };
+type PersonalInfo = { email: string; country: string };
+
+type Employee = Identity & PersonalInfo & { role: UserRole };
+
+const employee: Employee = {
+  id: "1",
+  email: "email@gmail.com",
+  name: "John",
+  country: "bangladesh",
   role: "admin",
-  isVerified: true,
 };
-
-const user2: TUser = {
-  name: "John deo",
-  role: "admin",
-  isVerified: true,
-};
-
-user1.isVerified;

@@ -1,16 +1,17 @@
-type UserRole = "user" | "admin" | "super-admin";
+// function pow(value: number, exponent: number = 2): number {
+//   return value ** exponent;
+// }
 
-const userRole: UserRole = "admin";
+// const result = pow(4, 2);
+// console.log(result);
 
-type Identity = { id: string; name: string };
-type PersonalInfo = { email: string; country: string };
+// const pow = (value: number, exponent: number = 2): number => value ** exponent;
 
-type Employee = Identity & PersonalInfo & { role: UserRole };
-
-const employee: Employee = {
-  id: "1",
-  email: "email@gmail.com",
-  name: "John",
-  country: "bangladesh",
-  role: "admin",
+const mathematics = {
+  exponent: 5,
+  pow(value: number): number {
+    return value ** this.exponent;
+  },
 };
+
+mathematics.pow(50);

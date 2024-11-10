@@ -1,17 +1,12 @@
-// function pow(value: number, exponent: number = 2): number {
-//   return value ** exponent;
-// }
+const numArr1: number[] = [1, 2, 3, 4, 5];
+const numArr2: number[] = [6, 7, 8, 9, 10];
 
-// const result = pow(4, 2);
-// console.log(result);
+const newArr: number[] = [...numArr1, ...numArr2];
 
-// const pow = (value: number, exponent: number = 2): number => value ** exponent;
+// console.log(newArr);
 
-const mathematics = {
-  exponent: 5,
-  pow(value: number): number {
-    return value ** this.exponent;
-  },
+const func = (...numbers: number[]) => {
+  console.log(numbers);
 };
 
-mathematics.pow(50);
+func(1, 2, 3);
